@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Divat Korszakok</title>
+</head>
+
+<body>
+    <header>
+        <h1><a class="cim" href="index.html">Divat Korszakok</a></h1>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="1960s.html">60-as évek</a></li>
+                <li><a href="1980s.html">80-as évek</a></li>
+                <li><a href="2000s.html">2000-es évek</a></li>
+                <li><a href="napjaink.html">Napjaink</a></li>
+                <li><a href="kerdoiv.html">Kérdőív</a></li>
+                <li><a class="active" href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    <article>
+        <p>
+            Üdvözlünk a Divatkorszak Quizben! Ez a kvíz segít kideríteni, hogy melyik divatkorszak stílusa illik leginkább hozzád. 
+        Hat kérdést fogsz látni, amelyek különböző divatpreferenciákra kérdeznek rá. 
+        Jegyezd fel a pontokat a válaszaid alapján, majd nézd meg, melyik korszakot testesíted meg leginkább!
+        </p>
+    </article>
+    <form action="#">
+        <ul>
+            <li class="quiz"><h2>1. Milyen minták vonzanak leginkább?</h2></li>
+            <label><li class="quiz"><input name="radio1" type="radio" id="1.1">Psychedelikus minták, élénk színek, geometriai formák</li></label>
+            <label><li class="quiz"><input name="radio1" type="radio" id="1.2">Neon színek, állatminták, bátor keverések</li></label>
+            <label><li class="quiz"><input name="radio1" type="radio" id="1.3">Minimalista minták, monokróm színek, logók</li></label>
+            <label><li class="quiz"><input name="radio1" type="radio" id="1.4">Virágminták, absztrakt vagy modern geometriai minták</li></label>
+        </ul>
+
+        <ul>
+            <li class="quiz"><h2>2. Milyen nadrágot választanál egy hétköznapi szetthez?</h2></li>
+            <label><li class="quiz"><input name="radio2" type="radio" id="2.1">Harangszárú nadrág vagy élénk színű leggings</li></label>
+            <label><li class="quiz"><input name="radio2" type="radio" id="2.2">Magas derekú farmer vagy műbőr nadrág</li></label>
+            <label><li class="quiz"><input name="radio2" type="radio" id="2.3">Alacsony derekú farmer vagy cargo nadrág</li></label>
+            <label><li class="quiz"><input name="radio2" type="radio" id="2.4">Egyenes szabású nadrág vagy bő szárú farmer</li></label>
+        </ul>
+
+        <ul>
+            <li class="quiz"><h2>3. Hogyan viszonyulsz a kiegészítőkhöz?</h2></li>
+            <label><li class="quiz"><li class="quiz"><input name="radio3" type="radio" id="3.1">Nagy, feltűnő fülbevalók és színes napszemüvegek</li></label>
+            <label><li class="quiz"><li class="quiz"><input name="radio3" type="radio" id="3.2">Övtáskák, nagy műanyag karkötők és statement ékszerek</li></label>
+            <label><li class="quiz"><li class="quiz"><input name="radio3" type="radio" id="3.3">Mini táskák, csillogó hajcsatok vagy choker nyakláncok</li></label>
+            <label><li class="quiz"><li class="quiz"><input name="radio3" type="radio" id="3.4">Réteges nyakláncok, finom ékszerek, letisztult táskák</li></label>
+        </ul>
+
+        <ul>
+            <li class="quiz"><h2>4. Milyen cipőt viselnél egy esti programra?</h2></li>
+            <label><li class="quiz"><input name="radio4" type="radio" id="4.1">Táncos szandál vagy lapos, színes cipő</li></label>
+            <label><li class="quiz"><input name="radio4" type="radio" id="4.2">Neon cipők vagy platform magassarkú</li></label>
+            <label><li class="quiz"><input name="radio4" type="radio" id="4.3">Tűsarkú vagy fehér sneakers</li></label>
+            <label><li class="quiz"><input name="radio4" type="radio" id="4.4">Chelsea csizma vagy chunky sneakers</li></label>
+        </ul>
+
+        <ul>
+            <li class="quiz"><h2>5. Melyik frizura áll legközelebb hozzád?</h2></li>
+            <label><li class="quiz"><input name="radio5" type="radio" id="5.1">Bob frizura vagy természetes hullámok</li></label>
+            <label><li class="quiz"><input name="radio5" type="radio" id="5.2">Dauerolt, volumendús haj vagy színes hajtincsek</li></label>
+            <label><li class="quiz"><input name="radio5" type="radio" id="5.3">Egyenes, hosszú haj, esetleg melírozott tincsek</li></label>
+            <label><li class="quiz"><input name="radio5" type="radio" id="5.4">Természetes árnyalatú, strukturált, modern frizura</li></label>
+        </ul>
+
+        <ul>
+            <li class="quiz"><h2>6. Hogyan írnád le az ideális sminked?</h2></li>
+            <label><li class="quiz"><input name="radio6" type="radio" id="6.1">Természetes, finom smink hangsúlyos szemekkel</li></label>
+            <label><li class="quiz"><input name="radio6" type="radio" id="6.2">Erős, élénk szemhéjpúder és kontrasztos rúzs</li></label>
+            <label><li class="quiz"><input name="radio6" type="radio" id="6.3">Csillogó szájfény, vékony tusvonal, pasztellszínek</li></label>
+            <label><li class="quiz"><input name="radio6" type="radio" id="6.4">„No-makeup” smink vagy kiemelt szemöldök</li></label>
+        </ul>
+        <div><input type="button" value="Küldés" id="mybutton" class="gomb">
+        <input type="reset" value="Törlés" class="gomb"></div>
+    </form>
+    </div>
+    <footer>©2024 Balajthi Boglárka |||
+        Az oldal tanulási célból készült</footer>
+    <script src="script.js">
+    </script>
+</body>
+
+</HTML>
