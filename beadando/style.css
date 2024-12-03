@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url("főoldal/hatter2.jpg");
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container>* {
+			height: fit-content;
+    margin: 1%;
+}
+
+
+
+header {
+    padding: 2px;
+    margin: 0px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #A6AEBF;
+    background-image: url('főoldal/hatter4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+article {
+    flex: 1 1 100%;
+    background-color: #613f75;
+    background: linear-gradient(135deg, #735d9a, #4a375e);
+    padding: 0px 8px;
+    color: #C0C0C0;
+    text-align: justify;
+    border-radius: 0px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+aside {
+    flex: 1 1 100%;
+    color: black;
+    background-color: #a01a7d;
+    background: linear-gradient(135deg, #a01a7d, #a95eb9);
+    padding: 15px;
+    text-align: center;
+    font-size: 0.84em;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    
+}
+
+footer {
+    background-color: #694F8E;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+
+nav {
+    padding: 8px;
+    flex: 1 1 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    display: block;
+    padding: 8px;
+    margin-bottom: 12px;
+    color: #141E46;
+    font-weight: bold;
+    font-family: "jaro";
+    background-color: #9B7EBD;
+    border-radius: 0px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    background-color: #3B1E54;
+    color: #C0C0C0;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    background-color: #8967B3;
+}
+
+@font-face {
+    font-family: "jaro";
+    src: url(fontok/Jaro/Jaro-Regular-VariableFont_opsz.ttf);
+}
+
+.cim {
+    text-decoration: none;
+    color: #C0C0C0;
+    font-family: "jaro";
+    letter-spacing: 5px;
+}
+
+h2.kiscim {
+    display: table;
+    text-align: center;
+    font-weight: bold;
+}
+
+p.szoveg {
+    padding: 5px;
+    text-indent: 1em;
+    font-size: medium;
+}
+
+li.quiz {
+    text-decoration: none;
+}
+
+.quiz {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.gomb {
+    text-align: center;
+    background-color: #4a375e;
+    color: #A6AEBF;
+    font-weight: bold;
+    align-items: center;
+}
+
+.background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding: 20px;
+    height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+.elso{
+    background-image: url('főoldal/catwalk2.jpg');
+}
+
+.masodik {
+    background-image: url('főoldal/catwalk.jpg');
+}
+
+.harmadik {
+    background-image: url('1960s/harmadik.jpg');
+}
+
+.negyedik {
+    background-image: url('1960s/negyedik.jpg');
+}
+
+.otodik {
+    background-image: url('1960s/otodik.jpg');
+}
+
+.hatodik {
+    background-image: url('1980s/hatodik.jpg');
+}
+
+.hetedik {
+    background-image: url('1980s/hetedik.jpg');
+}
+
+.nyolcadik {
+    background-image: url('1980s/nyolcadik.jpg');
+}
+
+.kilencedik {
+    background-image: url('2000s/kilencedik.jpg');
+}
+
+.tizedik {
+    background-image: url('2000s/tizedik.jpg');
+}
+
+.tizenegyedik {
+    background-image: url('2000s/tizenegyedik.jpg');
+}
+
+.tizenkettedik {
+    background-image: url('napjaink/tizenkettedik.jpg');
+}
+
+.tizenharmadik {
+    background-image: url('napjaink/tizenharmadik.jpg');
+}
+
+.tizennegyedik {
+    background-image: url('napjaink/tizennegyedik.jpg');
+}
+
+.photo {
+    height: 300px;
+    width: auto;
+}
+
+.kerdoiv {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+label.error{
+    color: red;
+    font-weight: bold;
+    display: block;
+}
+
+
+@media all and (min-width: 600px) {
+    nav {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav li {
+        flex: 1;
+    }
+
+    nav li a {
+        border-radius: 0;
+        
+    }
+
+    article {
+        flex-basis: 100%;
+    }
+    aside {
+        flex-basis: 100%;
+    }
+    aside.background {
+        flex-basis: 25%;
+    }
+    
+    aside.korszakok{
+        flex-basis: 48%;
+    }
+}
+
+@media all and (min-width: 768px) {
+    nav {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav li {
+        flex: 1;
+    }
+
+    nav li a {
+        border-radius: 0;
+        
+    }
+
+    article {
+        flex-basis: 73%;
+    }
+    
+    aside {
+        flex-basis: 23%;
+    }
+    aside.background {
+        flex-basis: 25%;
+    }
+    
+}

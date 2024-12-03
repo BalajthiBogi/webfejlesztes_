@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Divat Korszakok</title>
+</head>
+
+<body>
+    <header>
+    <h1><a class="cim" href="index.html">Divat Korszakok</a></h1>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="1960s.html">60-as évek</a></li>
+                <li><a href="1980s.html">80-as évek</a></li>
+                <li><a href="2000s.html">2000-es évek</a></li>
+                <li><a href="napjaink.html">Napjaink</a></li>
+                <li><a href="#" class="active">Kérdőív</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        
+        <form class="kerdoiv" method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="urlap">
+            
+            <p>
+                <label>
+                    Vezetéknév:<input type="text" name="vezetek">
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Keresztnév:<input type="text" name="kereszt">
+                </label>
+            </p>
+
+            <p>
+                <label>Adja meg az email címét:
+                <input type="email" name="email"></label>
+            </p>
+        
+            <p>
+                <label>
+                    Adja meg a telefonszámát:
+                    <input type="tel" name="tel" placeholder="06301234567">
+                </label>
+            </p>
+        
+            <p><label>Adja meg a születési dátumát: <input type="date" name="szuletes"></label></p>
+        
+            <p><label>Nem:<br><select name="nem" size="1">
+                <option value="" selected disabled>Válasszon!</option>
+                <option value="no">Nő</option>
+                <option value="ferfi">Férfi</option>
+                <option value="egyeb">Egyéb</option>
+            </select></label></p>
+        
+        <p><label>Milyen gyakran vásárolsz ruházati cikkeket?
+        <input type="text" list="gyakran" name="gyakori" placeholder="Válassz!" autofocus>
+        <datalist id="gyakran">
+        <option value="Hetente">
+        <option value="Havonta">
+        <option value="Évente néhány alkalommal">
+        <option value="Ritkábban">
+        </datalist></label></p>
+        
+        
+        <p>Melyik típusú üzletekben szokott a leggyakrabban vásárolni?<br>
+        
+            <label><input type="radio" name="vasarlas" value="fst">Fast fashion márkák (pl. H&M, Zara)</label><br>
+            <label><input type="radio" name="gyak" value="fth">Fenntartható divatmárkák</label><br>
+            <label><input type="radio" name="gyak" value="hszt"> Használt ruházati üzletek</label><br>
+            <label><input type="radio" name="gyak" value="lxs">Luxusüzletek</label>
+        
+        </p>
+        
+        <p>Hallottál már a következő kifejezésekről? (Több válasz is lehetséges)
+            <br>
+            <label>
+              <input type="checkbox" name="valasztasok" value="v1">Etikus divat</label>
+            <br>
+            <label>
+              <input type="checkbox" name="valasztasok" value="v2">Fast fashion</label>
+            <br>
+            <label>
+                <input type="checkbox" name="valasztasok" value="v3">Körforgásos gazdaság</label>
+            <br>
+            <label>
+                <input type="checkbox" name="valasztasok" value="v4">Karbonlábnyom</label>
+            <br>
+            <label>
+                <input type="checkbox" name="valasztasok" value="v5">Egyikről sem hallottam még</label>
+            <br>
+        </p>
+        
+        <p>Mi motiválna arra, hogy fenntarthatóbb divatot válassz?<br>
+            
+                <label><input type="radio" name="mot" value="ar">Alacsonyabb árak</label><br>
+                <label><input type="radio" name="mot" value="inf">Több információ az előnyökről</label><br>
+                <label><input type="radio" name="mot" value="konnyebb">Könnyebb elérhetőség</label>
+            </ul>
+        </p>    
+        
+        <p>
+            <label>Van-e egyéb észrevételed a témával kapcsolatban?<br>
+            <textarea name="eszre" rows="3" cols="50" placeholder="Ide írd az észrevételeidet:"></textarea></label>
+        </p>
+        <input type="submit" value="Küldés" class="gomb">
+        <input type="reset" value="Visszaállítás" class="gomb">
+        </form>
+    </div>
+    <footer>©2024 Balajthi Boglárka |||
+        Az oldal tanulási célból készült</footer>
+
+<script src="jquery-3.7.1.min.js"></script>
+<script src="jquery-validation-1.19.5/dist/jquery.validate.min.js">
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#urlap").validate({
+            rules: {
+                vezetek: "required",
+                kereszt: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                tel: {
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11,
+                },
+                szuletes: {
+                    required: true,
+                    date: true,
+                },
+                nem: {
+                    required: true,
+                },
+                gyakori: {
+                    required: true,
+                },
+                vasarlas: {
+                    required: true,
+                },
+                valasztasok: {
+                    required: true,
+                },
+                mot: {
+                    required: true,
+                },
+                
+            },
+            messages: {
+                vezetek: "Kérjük, adja meg a vezetéknevét!",
+                kereszt: "Kérjük, adja meg a keresztnevét!",
+                email: "Kérjük, valós email címet adjon meg!",
+                tel: {
+                    required: "Kérjük, adja meg a telefonszámát!",
+                    minlength: "Kérjük a megadott formátumban adja meg a telefonszámát!",
+                    maxlength: "Kérjük a megadott formátumban adja meg a telefonszámát!",
+                    digits: "Kérjük a megadott formátumban adja meg a telefonszámát!",
+                },
+                szuletes: {
+                    required: "Kérjük, adja meg a születési dátumát!",
+                    digits: "Kérjük a megadott formátumban adja meg a születési dátumát!",
+                },
+                nem: "Kérjük adja meg a nemét!",
+                gyakori: "Kérjük válasszon egyet!",
+                vasarlas: "Kérjük válasszon egyet!",
+                valasztasok: "Kérjük válasszon legalább 1-et!",
+                mot: "Kérjük válasszon egyet!",
+
+            },
+        });
+    });
+    
+</script>
+
+</body>
+
+</HTML>
